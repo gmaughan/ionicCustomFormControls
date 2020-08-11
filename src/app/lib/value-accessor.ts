@@ -1,5 +1,5 @@
 import { ControlValueAccessor, NgControl } from '@angular/forms';
-import { AfterViewInit, OnDestroy, Injector, ElementRef, NgZone } from '@angular/core';
+import { AfterViewInit, OnDestroy, Injector, ElementRef, NgZone, Injectable } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 export abstract class ValueAccessor implements ControlValueAccessor, AfterViewInit, OnDestroy {
