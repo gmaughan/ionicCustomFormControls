@@ -23,13 +23,13 @@ The custom file input control extends `lib/ValueAccessor` which is a modified cl
 
 The first issue is that the custom control is not presented in the same way as the `ion` controls. The border at the bottom of the list item, under the label, is indented.
 
-![Display issue](/images/display-issue.png "Display Issue")
+See `images/display-issue.png` in source.
 
 ## "Required" indicator issue
 
 The second issue is that the custom control does not present the "required" indicators (red bottom border) for the custom control.
 
-![Required issue](/images/required-issue.png "Required Issue")
+See `images/required-issue.png` in source.
 
 Note: The "Choose a File" button must be clicked for Field 2 to be touched.
 
