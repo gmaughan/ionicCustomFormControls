@@ -1,0 +1,35 @@
+:host {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.file-label {
+    align-self: center;
+    vertical-align: middle;
+}
+
+.file-button {
+    align-self: center;
+}
+
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+ion-thumbnail {
+    display: inline-block;
+    margin-right: 1rem;
+}

@@ -13,5 +13,31 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ng-container [formGroup]="form">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Field 1</ion-label>
+        <ion-input [formControl]="field1" name="field1" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Field 2</ion-label>
+        <app-file-input [formControl]="field2" name="field2" type="text"></app-file-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Field 3</ion-label>
+        <ion-input [formControl]="field3" name="field3" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-button slot="end" color="primary" (click)="onSubmit()">Submit</ion-button>
+      </ion-item>
+
+    </ion-list>
+
+  </ng-container>
+
 </ion-content>

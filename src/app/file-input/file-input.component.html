@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="file-label">
+    <ion-thumbnail *ngIf="imageUrl">
+      <img src="{{imageUrl}}" />
+    </ion-thumbnail>
+    <ion-text *ngIf="file; else nofile">{{file.name}} ({{file.size/1024 | number:'.2-2' }} KB)</ion-text>
+  </div>
+  <div class="file-button">
+    <input #input type="file" class="file-input" (change)="onFileChange($event)" [accept]="accept">
+    <ion-button *ngIf="!file; else clear" (click)="onBrowseClick()" color="secondary">
+      Choose a File
+    </ion-button>
+  </div>
+</div>
+
+<ng-template #clear>
+  <ion-button (click)="onClear()" color="light">
+    Clear File
+  </ion-button>
+</ng-template>
+
+<ng-template #nofile>
+  <ion-text>&nbsp;</ion-text>
+</ng-template>
