@@ -2,6 +2,8 @@
 
 Sample project demonstrating issues with custom form controls in an Ionic list.
 
+See [Ionic Feature Request 21903](https://github.com/ionic-team/ionic-framework/issues/21903).
+
 Run with:
 
 ```sh
@@ -9,7 +11,7 @@ npm install
 npm run start
 ```
 
-Tab 1 contains a reactive form with three fields:
+`Not Working` tab contains a reactive form with three fields:
 
 - Field 1 - simple text input
 - Field 2 - Custom file input control
@@ -34,3 +36,15 @@ See `images/required-issue.png` in source.
 Note: The "Choose a File" button must be clicked for Field 2 to be touched.
 
 Hit submit to output the `form` to the console. You will notice that all three fields are `INVALID`.
+
+## Workaround
+
+`Working` tab contains the same form with the `ion-item` containing the custom control modified to:
+
+```html
+<ion-item class="item-interactive" lines="none">
+```
+
+This fixes the issues.
+
+Still hoping for a supported Ionic feature.
