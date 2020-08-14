@@ -37,7 +37,7 @@ Note: The "Choose a File" button must be clicked for Field 2 to be touched.
 
 Hit submit to output the `form` to the console. You will notice that all three fields are `INVALID`.
 
-## Workaround
+## Working Tab
 
 `Working` tab contains the same form with the `ion-item` containing the custom control modified to:
 
@@ -45,6 +45,6 @@ Hit submit to output the `form` to the console. You will notice that all three f
 <ion-item class="item-interactive" lines="none">
 ```
 
-This fixes the issues.
+## Working (ionStyle) Tab
 
-Still hoping for a supported Ionic feature.
+`Working (ionStyle)` tab contains the same form and has the `app-file-input` raise the `ionStyle` event during `onInit()`.

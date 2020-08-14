@@ -30,11 +30,21 @@ export class FileInputComponent extends ValueAccessor implements OnInit, AfterVi
   accept: string;
 
   @Input() progress;
+  @Input() raiseIonStyle = false;
 
   @ViewChild('input', { static: true }) input: ElementRef<HTMLInputElement>;
 
   async ngOnInit(): Promise<void> {
     this.accept = 'image/jpeg, image/png, image/gif';
+
+    const event = new CustomEvent('ionStyle', {
+      bubbles: true,
+      detail: {
+        interactive: true,
+        input: true,
+      }
+    });
+    this.el.nativeElement.dispatchEvent(event);
   }
 
   writeValueImpl(value: any) {
